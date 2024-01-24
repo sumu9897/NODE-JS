@@ -1,9 +1,9 @@
-const http = require('http');
-const server = http.createServer((req, res) => {
-    res.end("Hello World!")
-});
+const http=require('http');
 
-server.listen(5050, () => {
+http.createServer(function(req,res){
 
-});
-console.log('Server is listening on port 5050');
+    res.write("Hello I am from server");
+    res.end();
+
+
+}).listen(8080)
